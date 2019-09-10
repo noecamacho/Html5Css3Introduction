@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Practice9</title>
+  <style>
+
+    body {
+      background-color: black;
+      text-align: center;
+    }
+
+    div {
+      height: 200px;
+      width: 50%;
+      background-color: blue;
+    }
+
+    #div2 {
+      height: 200px;
+      background-color: red;
+      max-width: 500px;
+    }
+
+    #div3:hover {
+      font-size: 15vw;
+      transition: 0.3ms;
+      color: black;
+      background-color: yellow;
+      width: 70%;
+    }
+
+    #unique:hover {
+      color:red !important;
+      font-size: 20vw !important;
+    }
+
+    .nav {
+      background-color: white;
+      width: 150px;
+      text-align: left;
+      padding-left: 15px;
+      padding-top: 30px;
+      padding-right: 15px;
+    }
+
+    .nav-element {
+      padding-bottom: 15px;
+    }
+
+    ul, b {
+      list-style-type: none;
+      font-family: monospace;
+      font-size: 23px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div></div>
+  <hr>
+  <div id="div2"></div>
+  <hr>
+  <div id="div3" style="text-align: center; padding: 25px;">
+    <i class="fa fa-bath" aria-hidden="true"></i>
+    <i class="fa fa-sign-language" aria-hidden="true" ></i>
+    <i id="unique" class="fa fa-venus-mars" aria-hidden="true" ></i>
+  </div>
+
+  <div class="nav">
+    <ul>
+
+      <li class="nav-element">
+        <a href="">
+          <i class="fa fa-bath" aria-hidden="true"></i>
+            <b>Baño</b>
+        </a>
+      </li>
+
+      <li class="nav-element">
+        <a href="">
+          <i class="fa fa-sign-language" aria-hidden="true" ></i>
+          <b>Manos</b>
+        </a>
+      </li>
+
+      <li class="nav-element">
+        <a href="">
+          <i class="fa fa-venus-mars" aria-hidden="true" ></i>
+          <b>Venus</b>
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+</body>
+</html>
