@@ -1,0 +1,34 @@
+.main {
+  background-color: black;
+}
+
+.desktop-div {
+  text-align: center;
+  align-content: center;
+  margin-top: 100px;
+}
+.desktop-img:hover {
+  border-color: purple;
+  border:5px solid #b217b4;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+span {
+  font-size: 50px;
+  text-align: center;
+}
+
+h1 {
+  font-family: sans-serif;
+}
+
+.price {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.go-back {
+  width:50px;
+  margin: 20px;
+}
