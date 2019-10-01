@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Practice 15</title>
+  <style>
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      z-index: 1;
+      border-radius: 25px;
+    }
+    .dropdown:hover .dropdown-content {
+      display:block;
+    }
+    .drop-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+    .dropdown:hover .drop-btn {
+      background-color: #3e8341;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dropdown</h1>
+
+  <!-- Dropdown 1 -->
+  <div class="dropdown">
+
+    <span>
+      Mouse over
+    </span>
+
+    <div class="dropdown-content">
+      <p>Hola Mundo</p>
+    </div>
+
+  </div>
+
+  <div style="padding-right:100px; display: inline"></div>
+  <!-- Dropdown 2 -->
+  <div class="dropdown">
+    <button class="drop-btn">Menu</button>
+    <div class="dropdown-content">
+      <a href="">Link 1</a>
+      <a href="">Link 2</a>
+      <a href="">Link 3</a>
+    </div>
+  </div>
+
+</body>
+</html>

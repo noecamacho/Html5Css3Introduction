@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Practice19</title>
+</head>
+
+<style>
+  table, th, td, caption {
+    border:2px solid Tomato;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 15px;
+  }
+  th, td {
+    padding: 15px;
+  }
+  th  {
+    text-align: left;
+  }
+  th {
+    text-align: left;
+    background-color: black;
+    color: white;
+  }
+  tr:nth-child(even) {
+    background-color: #eee;
+  }
+  tr:nth-child(odd) {
+    background-color: #fff;
+  }
+</style>
+<script>
+  const product = () => {
+    let textHTML = "";
+    let num = 5;
+    textHTML += `<table class><tr>`
+      for (let index = 1; index <= 10; index++) {
+        console.log(index);
+        // textHTML += `<td>${num}*${index}= ${num * index}</td>`
+        textHTML += `<td>${num}</td>`
+        textHTML += `<td>*</td>`
+        textHTML += `<td>${index}</td>`
+        textHTML += `<td>=</td>`
+        textHTML += `<td>${num * index}</td>`
+        textHTML += `</tr>`
+        }
+        num++;
+    textHTML += `</table>`
+
+    document.getElementById('contenedor').innerHTML = textHTML;
+  }
+</script>
+
+<body>
+  <button onclick="product();">Calculate</button>
+  <div id="contenedor"></div>
+</body>
+
+</html>

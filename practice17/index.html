@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .center {
+      padding-top: 10%;
+      padding-left: 25%;
+      padding-bottom: 20%;
+    }
+
+    div#sqrBottom {
+      text-align: center;
+      width: 550px;
+      height: 550px;
+      border: 3px solid black;
+      position: absolute;
+      background-color: red;
+      animation-duration: 8s;
+      animation-name: loading;
+      animation-iteration-count: infinite;
+    }
+
+    div#sqrMiddle {
+      margin: 45px;
+      width: 450px;
+      height: 450px;
+      border: 3px solid black;
+      background-color: green;
+      position: absolute;
+      animation-duration: 8s;
+      animation-name: loading;
+      animation-iteration-count: infinite;
+    }
+
+    div#sqrTop {
+      margin: 45px;
+      width: 350px;
+      height: 350px;
+      border: 3px solid black;
+      background-color: blue;
+      position: absolute;
+      animation-duration: 8s;
+      animation-name: loading;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes loading {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+
+    div#sqrLeftTop {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      display: inline-block;
+      transform-origin: 0% 0%;
+      animation-duration: 3s;
+      animation-name: moveSqrLeftTop;
+      animation-iteration-count: infinite;
+    }
+
+    div#sqrRightTop {
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+      display: inline-block;
+      transform-origin: 100% 0%;
+      animation-duration: 3s;
+      animation-name: moveSqrRightTop;
+      animation-iteration-count: infinite;
+    }
+
+
+    div#sqrLeftBottom {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      display: inline-block;
+      transform-origin: 0% 100%;
+      animation-duration: 3s;
+      animation-name: moveSqrLeftBottom;
+      animation-iteration-count: infinite;
+    }
+
+    div#sqrRightBottom {
+      width: 200px;
+      height: 200px;
+      background-color: green;
+      display: inline-block;
+      transform-origin: 100% 100%;
+      animation-duration: 3s;
+      animation-name: moveSqrRightBottom;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes moveSqrLeftBottom {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(-90deg);
+      }
+    }
+
+    @keyframes moveSqrLeftTop {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(90deg);
+      }
+    }
+
+    @keyframes moveSqrRightTop {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(-90deg);
+      }
+    }
+
+    @keyframes moveSqrRightBottom {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(90deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="center">
+    <div id="sqrBottom">
+      <div id="sqrMiddle">
+        <div id="sqrTop">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <div class="center">
+    <div id="sqrLeftTop"></div>
+    <div id="sqrRightTop"></div>
+    <div style="margin-top:10px;margin-left:170px;position:absolute">Saludos</div>
+    <br>
+    <div id="sqrLeftBottom"></div>
+    <div id="sqrRightBottom"></div>
+  </div>
+
+
+</body>
+
+</html>

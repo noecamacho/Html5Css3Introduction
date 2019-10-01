@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  </style>
+  <script>
+    const myFunction = () => {
+      document.getElementById('fecha').innerHTML = Date();
+      const name = 'Thomas Edison'
+      console.log(`1- El inventor del foco es ${name}`);
+      console.log('2- El inventor del foco es ' + name);
+    };
+  </script>
+  <script src="./script.js"></script>
+</head>
+
+<body>
+  <h2 id="titulo">Mi primer javascript</h2>
+  <button onclick="myFunction()">Mostrar hora y fecha</button>
+  <br>
+  <button onclick="document.getElementById('titulo').style.fontSize='24px'">Tamaño 24px</button>
+  <button onclick="document.getElementById('titulo').style.fontSize='70px'">Tamaño 70px</button>
+  <br>
+  <button onclick="document.getElementById('titulo').style.color='black'">Color BLACK</button>
+  <button onclick="document.getElementById('titulo').style.color='red'">Color RED</button>
+
+  <p id="fecha"></p>
+  <hr>
+  <button onclick="document.getElementById('focoImg').src='./focoEncendido.jpg'">Prender</button>
+  <img src="./focoApagado.jpg" id="focoImg" alt="" style="width: 200px;" />
+  <button onclick="document.getElementById('focoImg').src='./focoApagado.jpg'">Apagar</button>
+</body>
+
+
+</html>
