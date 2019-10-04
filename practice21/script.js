@@ -6,6 +6,9 @@ let cardsBlocked = false; // Prevents selection of cards momentarily
 let firstCard, secondCard; // Remembers selected cards
 let score = 0; // Total score of the user
 
+/**
+ * Shuffles the cards every time the page refreshes
+ */
 function shuffleCards() {
   /* Generates a random set of numbers */
   let nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
@@ -27,27 +30,37 @@ function shuffleCards() {
   console.log('👋🏻👋🏻 Cards shuffled 👋👋🏻 ');
 };
 
+/**
+ * Refreshes the scoreboard items
+ */
 function showScoreBoard() {
   let listOfScores = '';
   const arrayOfLocalStorageValues = [];
   for (let i = 0; i < localStorage.length; i++) {
-    arrayOfLocalStorageValues.push(localStorage.getItem(localStorage.key(i)));
+    arrayOfLocalStorageValues.push(localStorage.getItem(localStorage.key(i))); // Obtains the key values
   }
-  const arrayOfLocalStorageKeys = Object.keys(localStorage);
+  const arrayOfLocalStorageKeys = Object.keys(localStorage); // Obtains the name of the keys
 
   for (let index = 0; index < arrayOfLocalStorageKeys.length; index++) {
-    listOfScores += arrayOfLocalStorageKeys[index] + ': '+arrayOfLocalStorageValues[index] + '<br>';
+    listOfScores += arrayOfLocalStorageKeys[index] + ': ' + arrayOfLocalStorageValues[index] + '<br>'; // Unifies every key with its value
   }
 
-  document.querySelector('html > body> div.scoreboard').innerHTML = listOfScores;
+  document.querySelector('html > body> div.scoreboard').innerHTML = listOfScores; // Displays them in the DOM
 };
 
+/**
+ * Registers the name of the player in the scoreboard
+ */
 function setScoreToBoard() {
-  const name = prompt('Cual es tu nombre?');
+  const name = prompt('What\'s your name?');
   localStorage.setItem(name, score);
-  showScoreBoard();
+  showScoreBoard(); // Refreshes the scoreboard
 };
 
+/**
+ * Displays the current score count
+ * @param {Integer} points 
+ */
 function setScore(points) {
   score += points;
   if (score < 0) {
@@ -62,8 +75,11 @@ function setScore(points) {
   }
 };
 
+/**
+ * Verifies that the user has completed the game
+ */
 function checkGameStatus() {
-  if(document.getElementsByClassName('match').length == 12) setScoreToBoard();
+  if (document.getElementsByClassName('match').length == 12) setScoreToBoard();
 };
 
 /**
@@ -91,7 +107,7 @@ function flipCard() {
         secondCard.classList.add('match');
         /* Updates Current Score */
         setScore(50);
-        /* Reset cards identifier variables for later use */
+        /* Reset cards identity variables for later use */
         firstCard = '';
         secondCard = '';
         cardWasFlipped = false;
@@ -120,6 +136,7 @@ function flipCard() {
           firstCard.firstElementChild.style.background = '#424549';
           secondCard.firstElementChild.style.background = '#424549';
           firstCard.addEventListener('click', flipCard)
+          /* Reset cards identifier variables for later use */
           cardWasFlipped = false;
           cardsBlocked = false;
         }, 1500);
@@ -143,15 +160,7 @@ function flipCard() {
 shuffleCards();
 showScoreBoard();
 
-// Register all present cards
+/* Registers all cards from the DOM */
 const cards = document.querySelectorAll('.memory-card');
+/* Every card gets triggered by a click */
 cards.forEach(card => card.addEventListener('click', flipCard));
-
-
-// (function shuffle() {
-//   console.log('mere')
-//   cards.forEach(card => {
-//     let randomPosition = Math.floor(Math.random() * 12);
-//     card.style.order + randomPosition;
-//   })
-// })()
